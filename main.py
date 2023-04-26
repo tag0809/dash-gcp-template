@@ -147,7 +147,7 @@ def display_page(x, groupby, tab):
                 html.H5('Correlation between Inflation, home amount, vehicle, unemployment, and business conditions'),
                 html.P('I would expect these to have positive correlations with each other, as unemployment, buying attitudes, and personal finance should reflect on how the economy is doing.'),
                 html.Div([
-                    dcc.Graph(id='fig4', figure=fig5)
+                    dcc.Graph(id='fig4', figure=fig14)
                 ]),
                 html.P('This is more or less what we see, as personal finances being better or worse is affected by unemployment, and these all generally have a negative affect on how we view the economy.'),
                 html.H5('Correlation between Inflation and Buying Attitudes'),
