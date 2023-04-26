@@ -38,7 +38,7 @@ def main(df):
     corr_columns = ['PRICES_UP/DOWN_NEXT_YEAR', 'DURABLES_BUYING_ATTITUDES', 'HOME_BUYING_ATTITUDES', 'VEHICLE_BUYING_ATTITUDES']
     corr_df = df[corr_columns]
     corr_matrix = corr_df.corr()
-    annotations = corr_matrix.values
+    annotations = np.round(corr_matrix.values, 2)
     counts = df['EDUCATION:_COLLEGE_GRADUATE'].value_counts()
     # Get the sizes and labels for the pie chart
     sizes = [counts[0], counts[1]]
