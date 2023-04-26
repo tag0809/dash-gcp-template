@@ -90,17 +90,17 @@ def main(df):
     fig3.update_traces(textposition='inside', textinfo='percent+label')
     fig3.update_layout(font=dict(size=18),
                     showlegend=True)
-    fig4 = px.imshow(corr, x=corr.columns, y=corr.columns,
-            color_continuous_scale='RdBu', zmin=-1, zmax=1, aspect='auto')
-    fig4.update_layout(
-                    title={
-                        'text': 'Correlation Heatmap',
-                        'y': 0.95,
-                        'x': 0.5,
-                        'xanchor': 'center',
-                        'yanchor': 'top'
-                    }
-                )
+#     fig4 = px.imshow(corr, x=corr.columns, y=corr.columns,
+#             color_continuous_scale='RdBu', zmin=-1, zmax=1, aspect='auto')
+#     fig4.update_layout(
+#                     title={
+#                         'text': 'Correlation Heatmap',
+#                         'y': 0.95,
+#                         'x': 0.5,
+#                         'xanchor': 'center',
+#                         'yanchor': 'top'
+#                     }
+#                 )
     #create double bar graph using plotly express
     fig5 = px.bar(pivot, x='SURVEY_YEAR', y=['M', 'F'], barmode='group')
     fig5.update_xaxes(title='Survey Year')
@@ -151,7 +151,7 @@ def main(df):
     fig19 = px.line(df_buying_marry, x='SURVEY_YEAR', y='HOME_BUYING_ATTITUDES', color='MARITAL_STATUS_OF_RESPONDENT')
     fig20 = px.line(df_buying_marry, x='SURVEY_YEAR', y='VEHICLE_BUYING_ATTITUDES', color='MARITAL_STATUS_OF_RESPONDENT')
 
-    return fig1, fig2, fig3, fig4, fig5, fig6, fig7, fig8, fig9, fig10, fig11, fig12, fig13, fig14, fig15, fig17, fig18, fig19, fig20
+    return fig1, fig2, fig3, fig5, fig6, fig7, fig8, fig9, fig10, fig11, fig12, fig13, fig14, fig15, fig17, fig18, fig19, fig20
 
 if __name__ == '__main__':
     pass
