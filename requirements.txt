@@ -30,4 +30,4 @@ tenacity==8.1.0
 Werkzeug==0.16.0
 seaborn
 numpy==1.23.1
-statsmodel
+statsmodels
