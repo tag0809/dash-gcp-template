@@ -107,21 +107,21 @@ def main(df):
     #set plot title and labels
     fig5.update_layout(title='Year on Year Average Income by Sex and Category', xaxis_title='Year, Sex', yaxis_title='Average Income')
     #figure 6
-    fig6 = px.imshow(corr_matrix.values,
-            x=corr_columns, y=corr_columns,
-            color_continuous_scale='blues',
-            zmin=-1, zmax=1,
-            labels=dict(x='', y=''))
-    # add annotations to the heatmap
-    for i in range(len(corr_columns)):
-        for j in range(len(corr_columns)):
-            fig6.add_annotation(x=corr_columns[i], y=corr_columns[j],
-                            text=str(annotations[i][j]),
-                            showarrow=False, font=dict(color='white'))
-    # update layout to show the color scale and adjust the margins
-    fig6.update_layout(title="Correlation Matrix",
-                    coloraxis_colorbar=dict(title='Correlation'),
-                    margin=dict(l=100, r=100, t=50, b=100))
+#     fig6 = px.imshow(corr_matrix.values,
+#             x=corr_columns, y=corr_columns,
+#             color_continuous_scale='blues',
+#             zmin=-1, zmax=1,
+#             labels=dict(x='', y=''))
+#     # add annotations to the heatmap
+#     for i in range(len(corr_columns)):
+#         for j in range(len(corr_columns)):
+#             fig6.add_annotation(x=corr_columns[i], y=corr_columns[j],
+#                             text=str(annotations[i][j]),
+#                             showarrow=False, font=dict(color='white'))
+#     # update layout to show the color scale and adjust the margins
+#     fig6.update_layout(title="Correlation Matrix",
+#                     coloraxis_colorbar=dict(title='Correlation'),
+#                     margin=dict(l=100, r=100, t=50, b=100))
     #figure 7 pie chart
     fig7 = px.pie(values=sizes, names=labels, title='Proportion of College Graduates in Respondents')
     fig7.update_traces(textposition='inside', textinfo='percent+label')
@@ -151,7 +151,7 @@ def main(df):
     fig19 = px.line(df_buying_marry, x='SURVEY_YEAR', y='HOME_BUYING_ATTITUDES', color='MARITAL_STATUS_OF_RESPONDENT')
     fig20 = px.line(df_buying_marry, x='SURVEY_YEAR', y='VEHICLE_BUYING_ATTITUDES', color='MARITAL_STATUS_OF_RESPONDENT')
 
-    return fig1, fig2, fig3, fig5, fig6, fig7, fig8, fig9, fig10, fig11, fig12, fig13, fig14, fig15, fig17, fig18, fig19, fig20
+    return fig1, fig2, fig3, fig5, fig7, fig8, fig9, fig10, fig11, fig12, fig13, fig14, fig15, fig17, fig18, fig19, fig20
 
 if __name__ == '__main__':
     pass
