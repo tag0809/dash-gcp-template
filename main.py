@@ -17,7 +17,7 @@ df = data_cleaning.main()
 df = data_cleaning.as_type(df, 'int', 'TOTAL_HOUSEHOLD_INCOME_-_CURRENT_DOLLARS')
 df = data_cleaning.as_type(df, 'int', 'AGE_OF_RESPONDENT')
 
-fig1, fig2, fig3, fig4, fig5, fig6, fig7, fig8, fig9, fig10, fig11, fig12, fig13, fig14, fig15, fig17, fig18, fig19, fig20 = create_charts.main(df)
+fig1, fig2, fig3, fig5, fig6, fig7, fig8, fig9, fig10, fig11, fig12, fig13, fig14, fig15, fig17, fig18, fig19, fig20 = create_charts.main(df)
 
 #ml models creation
 X_train, X_test, y_train, y_test = get_split(df)
@@ -147,7 +147,7 @@ def display_page(x, groupby, tab):
                 html.H5('Correlation between Inflation, home amount, vehicle, unemployment, and business conditions'),
                 html.P('I would expect these to have positive correlations with each other, as unemployment, buying attitudes, and personal finance should reflect on how the economy is doing.'),
                 html.Div([
-                    dcc.Graph(id='fig4', figure=fig4)
+                    dcc.Graph(id='fig4', figure=fig5)
                 ]),
                 html.P('This is more or less what we see, as personal finances being better or worse is affected by unemployment, and these all generally have a negative affect on how we view the economy.'),
                 html.H5('Correlation between Inflation and Buying Attitudes'),
